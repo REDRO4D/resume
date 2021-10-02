@@ -1,0 +1,57 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0.6rem 1rem;
+    position: relative;
+    color: black;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0%;
+    width: 100%;
+    background-color: rgba(211, 208, 203, 0.5);
+  }
+
+  a:hover {
+    color: black;
+  }
+}
+
+nav a:hover::after {
+  height: 100%;
+  animation: up 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes up {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}

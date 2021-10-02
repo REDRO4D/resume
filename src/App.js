@@ -5,7 +5,10 @@ import React, { Fragment } from 'react';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Home from './pages/home'; // Importa el modulo home
+import Home from './pages/Home'; // Importa el modulo home
+import LogIn from './pages/LogIn';
+import PageNotFound from './pages/PageNotFound';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   return (
@@ -13,6 +16,9 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={LogIn} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route component={PageNotFound} />
         </Switch>
       </BrowserRouter>
     </Fragment>
