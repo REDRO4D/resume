@@ -1,11 +1,8 @@
-.content {
-  height: 84vh;
+.card-wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2a2a72;
-  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  padding: 4rem 0;
 }
 
 .card {
@@ -17,45 +14,45 @@
   justify-content: center;
   min-width: 25rem;
   background-color: white;
+  width: 30rem;
 }
 
-.title{
+.title {
   margin-bottom: 1rem;
 
-  h2{
+  h2 {
     font-size: 1.4rem;
   }
 
-  p{
+  p {
     font-size: 1.2rem;
   }
 
-  a{
+  a {
     color: #2a2a72;
     text-decoration: none;
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
 }
 
-
-form{
+form {
   display: flex;
   flex-direction: column;
 
-  label{
+  label {
     font-size: 1rem;
     margin-bottom: 0.2rem;
   }
 
-  input{
+  input {
     padding: 0.5rem;
     font-size: 1.2rem;
   }
 
-  button{
+  button {
     background-color: #009ffd;
     border: 0.1rem solid #009ffd;
     color: white;
@@ -64,36 +61,36 @@ form{
     transition: all 0.2s ease;
     cursor: pointer;
     font-size: 1.2rem;
-    
-    &:hover{
+
+    &:hover {
       border: 0.1rem solid rgba(0, 0, 0, 0.2);
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     }
   }
 }
 
-.input-wrapper{
+.input-wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
-.separator{
+.separator {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 1.5rem 0;
 
-  p{
+  p {
     font-size: 1.2rem;
   }
 }
 
-.separator{
+.separator {
   &::before,
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     display: block;
     position: relative;
     width: 40%;
@@ -102,12 +99,12 @@ form{
   }
 }
 
-.login-with{
+.login-with {
   display: flex;
   flex-direction: column;
 }
 
-.login-with button{
+.login-with button {
   border: 0.1rem solid gray;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -122,41 +119,47 @@ form{
   transition: all 0.2s ease;
 
   svg,
-  span{
+  span {
     width: 2rem;
     height: 2rem;
   }
-  span{
+  span {
     display: block;
   }
 
-  p{
+  p {
     color: #000;
     margin: 0 0.5rem;
     font-size: 1.2rem;
   }
 
-  &:hover{
+  &:hover {
     border-color: #2a2a72;
     background-color: #2a2a72;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 
-    p{
+    p {
       color: white;
     }
 
-    svg{
+    svg {
       fill: white;
     }
   }
 
-  &:first-of-type:hover{
-    background: rgb(0,135,68);
-    background: linear-gradient(90deg, rgba(0,135,68,1) 0%, rgba(0,87,231,1) 35%, rgba(214,45,32,1) 69%, rgba(252,165,0,1) 100%);
+  &:first-of-type:hover {
+    background: rgb(0, 135, 68);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 135, 68, 1) 0%,
+      rgba(0, 87, 231, 1) 35%,
+      rgba(214, 45, 32, 1) 69%,
+      rgba(252, 165, 0, 1) 100%
+    );
     border-color: transparent;
   }
 }
 
-.login-with button:not(:last-of-type){
+.login-with button:not(:last-of-type) {
   margin-bottom: 1rem;
 }

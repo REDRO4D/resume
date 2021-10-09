@@ -2,21 +2,28 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 import Layout from "../components/Layout";
+import TitleSection from "../components/TitleSection";
 
 const SignUp = () => {
     return (
         <Fragment>
             <Layout>
-                <div className="content">
+                <TitleSection>
+                    <h2>Crear una cuenta</h2>
+                    <p>Un paso antes de comentar</p>
+                </TitleSection>
+                <div className="card-wrapper">
                     <div className="card">
                         <div className="title">
-                            <h2>Inicia sesi&oacute;n para continuar</h2>
-                            <p>¿Ya tienes cuenta? <Link to="/login">Iniciar sesi&oacute;n</Link> </p>
+                            <h2>Hola</h2>
+                            <p>¿Ya tienes una cuenta?
+                                <Link to="/login"> Inicia sesi&oacute;n</Link>
+                            </p>
                         </div>
                         <form action="" method="">
                             <div className="input-wrapper">
                                 <label htmlFor="name">Nombre completo</label>
-                                <input type="text" name="" id="name" placeholder="Bruno Miguel Rosales Vargas" />
+                                <input type="text" name="" id="name" placeholder="Miguel One" />
                             </div>
                             <div className="input-wrapper">
                                 <label htmlFor="email">Correo</label>
@@ -26,7 +33,7 @@ const SignUp = () => {
                                 <label htmlFor="password">Contrase&ntilde;a</label>
                                 <input type="password" name="" id="password" placeholder="*********" />
                             </div>
-                            <button>Crear cuenta</button>
+                            <button>Registrarse</button>
                         </form>
                     </div>
                 </div>
