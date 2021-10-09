@@ -1,12 +1,14 @@
 import React, { Fragment } from "react";
-import Hero from "../components/Hero";
-import Layout from "../components/Layout";
+import Hero from "./../components/home/Hero";
+import AboutMe from "./../components/home/AboutMe";
+import Layout from "./../components/Layout";
 
 const Home = () => {
   return (
     <Fragment>
       <Layout>
         <Hero />
+        <AboutMe />
       </Layout>
     </Fragment>
   );

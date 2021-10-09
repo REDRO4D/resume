@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import './../styles/hero.scss';
+import './../../styles/hero.scss';
 
-import person from './../assets/person.png';
+import person from './../../assets/person.png';
 
 const Hero = () => {
     return (
