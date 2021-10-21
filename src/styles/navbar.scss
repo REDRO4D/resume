@@ -41,6 +41,13 @@
   padding: 0.6rem 0;
   margin-bottom: 1rem;
   border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.navbar .links button {
+  background-color: transparent;
+  border: none;
+  display: inline;
 }
 
 .navbar .links .selected {
@@ -77,4 +84,8 @@
 
 .navbar .social-media-wrapper svg:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout {
+  color: rgb(231, 71, 71) !important;
 }

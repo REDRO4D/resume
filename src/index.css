@@ -25,7 +25,7 @@ a {
   display: none;
 }
 
-#content-wrapper {
+.content-wrapper {
   grid-area: content;
   overflow-y: scroll;
   padding: 4rem;
@@ -77,14 +77,71 @@ a {
   transition: background-color 0.2s ease-in-out;
 }
 
-/* Test */
+/* Prueba */
+
+.button {
+  background-color: steelblue;
+  border: none;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 1.2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: rgb(48, 99, 141);
+}
+
+/* FORMS */
+form label {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  border: 0.1rem solid #d7d8da;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: steelblue;
+  box-shadow: 0 0 0.2rem steelblue;
+}
+/*  */
+.buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cancel-button {
+  background-color: transparent;
+  color: red;
+}
+
+.cancel-button:hover {
+  background-color: rgb(255, 221, 221);
+}
+
 @media screen and (max-width: 768px) {
   body {
     display: flex;
   }
 
-  #content-wrapper {
+  .content-wrapper {
     width: 100vw;
+    box-sizing: border-box;
   }
 
   .title-wrapper h2 {
@@ -133,7 +190,7 @@ a {
     box-sizing: border-box;
   }
 
-  #content-wrapper {
+  .content-wrapper {
     padding: 6rem 1rem;
   }
 }

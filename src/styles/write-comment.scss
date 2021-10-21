@@ -1,0 +1,14 @@
+.write-comment h2 {
+  text-align: center;
+}
+
+.buttons-wrapper .button {
+  width: 45%;
+}
+
+.write-form textarea {
+  grid-area: message;
+  resize: vertical;
+  min-height: 4rem;
+  max-height: 30rem;
+}

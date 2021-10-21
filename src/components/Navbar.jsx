@@ -1,41 +1,66 @@
-import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import React, { Fragment, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import './../styles/navbar.scss';
 import avatar from './../assets/person.png';
+import { UseUserDataContext } from './../context/userContext';
+import { logout } from './../actions/auth';
 
 const Navbar = () => {
+    const { userHasLogged } = UseUserDataContext();
+    const [navState, setNavState] = useState(false);
+    const chageState = () => {
+        setNavState(!navState);
+    }
+
+    const click = () => {
+        logout();
+    }
+
     return (
         <Fragment>
-            <nav id="navbar" className="navbar hide">
-                <a className="user" href="sdf">
+            <button className="mobile-menu" type="button" onClick={chageState}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+            <nav id="navbar" className={(navState) ? 'navbar show' : 'navbar hide'}>
+                <Link className="user" to="/">
                     <figure>
                         <img src={avatar} className="user-image" alt="" />
                     </figure>
                     <p className="name">Bruno Rosales</p>
-                </a>
+                </Link>
                 <ul className="links">
                     <li>
-                        <Link to="/">Inicio</Link>
+                        <NavLink to="home" activeClassName="selected">Inicio</NavLink>
                     </li>
                     <li>
-                        <Link to="about-me">Sobre mi</Link>
+                        <NavLink to="about-me" activeClassName="selected">Sobre mi</NavLink>
                     </li>
                     <li>
-                        <Link to="skills">Habilidades</Link>
+                        <NavLink to="skills" activeClassName="selected">Habilidades</NavLink>
                     </li>
                     <li>
-                        <Link to="portfolio">Portafolio</Link>
+                        <NavLink to="portfolio" activeClassName="selected">Portafolio</NavLink>
                     </li>
                     <li>
-                        <Link to="comments">Comentarios</Link>
+                        <NavLink to="comments" activeClassName="selected">Comentarios</NavLink>
                     </li>
                     <li>
-                        <Link to="contact">Contacto</Link>
+                        <NavLink to="contact" activeClassName="selected">Contacto</NavLink>
                     </li>
+                    {
+                        (userHasLogged) &&
+                        <li>
+                            <a className="logout" onClick={click}>Cerrar sesi&oacute;n</a>
+                        </li>
+
+                    }
                 </ul>
                 <div className="social-media-wrapper">
                     <a href="#" title="Perfil de LinkedIn">
-                        <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512"
+                        <svg id="Bold" height="512" viewBox="0 0 24 24" width="512"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z" />

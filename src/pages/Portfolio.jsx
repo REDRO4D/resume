@@ -7,40 +7,42 @@ const Portfolio = () => {
     return (
         <Fragment>
             <Layout>
-                <TitleSection>
-                    <h2>Portafolio</h2>
-                    <p>Mis trabajos</p>
-                </TitleSection>
-                <div className="projects">
-                    <div className="project">
-                        <div className="info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, recusandae velit officiis
-                                perspiciatis.</p>
-                            <a href="https://bruno-rosales-practica.000webhostapp.com/" target="_blank">Ver proyecto</a>
+                <div className="content-wrapper">
+                    <TitleSection>
+                        <h2>Portafolio</h2>
+                        <p>Mis trabajos</p>
+                    </TitleSection>
+                    <div className="projects">
+                        <div className="project">
+                            <div className="info">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, recusandae velit officiis
+                                    perspiciatis.</p>
+                                <a href="https://bruno-rosales-practica.000webhostapp.com/" target="_blank">Ver proyecto</a>
+                            </div>
+                            <figure>
+                                < img src={pcDesign} alt="" />
+                            </figure>
                         </div>
-                        <figure>
-                            < img src={pcDesign} alt="" />
-                        </figure>
-                    </div>
-                    <div className="project">
-                        <div className="info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, recusandae velit officiis
-                                perspiciatis.</p>
-                            <a href="#">Ver proyecto</a>
+                        <div className="project">
+                            <div className="info">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, recusandae velit officiis
+                                    perspiciatis.</p>
+                                <a href="#">Ver proyecto</a>
+                            </div>
                         </div>
-                    </div>
-                    <div className="project">
-                        <div className="info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, recusandae velit officiis
-                                perspiciatis.</p>
-                            <a href="#">Ver proyecto</a>
+                        <div className="project">
+                            <div className="info">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, recusandae velit officiis
+                                    perspiciatis.</p>
+                                <a href="#">Ver proyecto</a>
+                            </div>
                         </div>
-                    </div>
-                    <div className="project">
-                        <div className="info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, recusandae velit officiis
-                                perspiciatis.</p>
-                            <a href="#">Ver proyecto</a>
+                        <div className="project">
+                            <div className="info">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, recusandae velit officiis
+                                    perspiciatis.</p>
+                                <a href="#">Ver proyecto</a>
+                            </div>
                         </div>
                     </div>
                 </div>

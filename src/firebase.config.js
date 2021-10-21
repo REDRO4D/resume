@@ -3,6 +3,8 @@ import firebase from 'firebase/compat/app';// Importacion firebase/app como obje
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
 import 'firebase/compat/storage';
+//import { GoogleAuthProvider } from 'firebase/auth';
+
 // import 'firebase/functions';
 
 const firebaseConfig = {
@@ -19,14 +21,17 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
-const db = firebase.firebase();
+const db = firebase.firestore();
 const storage = firebase.storage();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+// const googleAuthProvider = new GoogleAuthProvider();
+// const facebookAuthProvider = new FacebookAuthProvider();
 const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
 // const functions = firebase.functions();
 
 export {
     auth,
+    firebase,
     db,
     storage,
     googleAuthProvider,
